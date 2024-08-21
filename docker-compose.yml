@@ -4,7 +4,13 @@ services:
     image: nikitap/countrybank
     ports:
       - "8000:8000"
-  
+    environment:
+      CONFIG_MAIL_HOST: "smtp.example.com"
+      CONFIG_MAIL_PORT: "587"
+      CONFIG_MAIL_SMTP_AUTH: "true"
+      CONFIG_MAIL_STARTTLS: "true"
+      CONFIG_MAIL_USERNAME: "bala"
+      CONFIG_MAIL_PASSWORD: "bala@123"
     logging:
         options:
           max-size: "20m"
